@@ -1,0 +1,12 @@
+{% extends 'fb_form/base.html' %}
+ 
+{% block title %}Feedback Form{% endblock %}
+ 
+{% block body %}
+    <h1>hellow</h1>
+<form action="{% url 'fb_form:home' %}" method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" />
+</form>
+{% endblock %}
